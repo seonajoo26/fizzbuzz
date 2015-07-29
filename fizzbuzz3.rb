@@ -1,13 +1,19 @@
-1.upto(100) do |i|
-	if i.to_s.start_with?("1")
-		puts 'Bang'
-	elsif i % 3 == 0
-		puts 'Fizz'
-	elsif i % 5 == 0
-		puts 'Buzz'
-	elsif i % 3 == 0 && i % 5 == 0
-		puts 'FizzBuzz'
-	else
-		puts i
-	end
+i = 1
+while i <= 100
+	results = ""
+
+	results << "Bang" if i.to_s.start_with?("1")	
+	results << "Fizz" if i % 3 == 0
+	results << "Buzz" if i % 5 == 0
+	if results == ""
+	puts i
+	else 
+	puts results
+	end	
+
+	i += 1
 end
+
+
+
+
